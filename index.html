@@ -79,8 +79,8 @@
   .strip{display:grid;grid-template-columns:repeat(27,1fr);gap:4px}
   .strip button{
     border:none;border-radius:7px;aspect-ratio:1/1.35;min-width:0;cursor:pointer;
-    font-family:var(--mono);font-size:9.5px;font-weight:700;color:#fff;
-    display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;
+    font-family:var(--mono);font-size:12.5px;font-weight:800;color:#fff;
+    display:flex;align-items:center;justify-content:center;
     box-shadow:inset 0 0 0 1px rgba(5,28,44,.10);
     transition:transform .12s ease,box-shadow .12s ease;
   }
@@ -90,7 +90,7 @@
   .strip button.s-not_yet{background:var(--red)}
   @media(max-width:720px){
     .strip{grid-template-columns:repeat(9,1fr)}
-    .strip button{aspect-ratio:1.5/1}
+    .strip button{aspect-ratio:1.5/1;font-size:13.5px}
   }
 
   /* ---------- summary counts / filter chips ---------- */
