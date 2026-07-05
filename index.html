@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>EU Pay Transparency Directive Tracker</title>
+<meta name="description" content="Live overview of the implementation status of Directive (EU) 2023/970 — the EU Pay Transparency Directive — across all 27 member states.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#051C2C; --navy-2:#0A2A3D; --ink:#0A2540;
+    --blue:#1A66C9; --blue-deep:#0F4B9C; --blue-soft:#EAF1FB;
+    --gold:#F4C400; --eu-blue:#003399;
+    --paper:#F4F6F8; --paper-2:#EEF1F4; --card:#FFFFFF;
+    --line:#E2E6EB; --line-strong:#CDD5DE; --muted:#5C6B7A; --faint:#8995A3;
+    --green:#0E7A53; --green-soft:#E7F4EE;
+    --amber:#B07A00; --amber-soft:#F9F0DA;
+    --red:#B42318; --red-soft:#FBEBE8;
+    --serif:'Newsreader', Georgia, 'Times New Roman', serif;
+    --sans:'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+    --mono:ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    --sh:0 1px 2px rgba(5,28,44,.05), 0 14px 34px -18px rgba(5,28,44,.22);
+    --sh-sm:0 1px 2px rgba(5,28,44,.05), 0 7px 18px -12px rgba(5,28,44,.16);
+    --bg-glow:radial-gradient(130% 70% at 50% -20%, #eef2f7 0%, rgba(238,242,247,0) 55%);
+    --body-bg:#fff;
+  }
+  [data-theme="dark"]{
+    --navy:#E9EEF4; --navy-2:#DDE6EF; --ink:#DCE4EE;
+    --blue:#6FA3E8; --blue-deep:#8FB6EE; --blue-soft:#10283E;
+    --paper:#0A2130; --paper-2:#0C2536; --card:#0B2434;
+    --line:#1B3A50; --line-strong:#2A4C66; --muted:#93A6B8; --faint:#6E8397;
+    --green:#3FBF8F; --green-soft:#0E3226;
+    --amber:#E5B23C; --amber-soft:#33290E;
+    --red:#F08476; --red-soft:#3B1712;
+    --sh:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -18px rgba(0,0,0,.6);
+    --sh-sm:0 1px 2px rgba(0,0,0,.5), 0 7px 18px -12px rgba(0,0,0,.5);
+    --bg-glow:radial-gradient(130% 70% at 50% -20%, #0d2a3e 0%, rgba(13,42,62,0) 55%);
+    --body-bg:#051C2C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:var(--sans);color:var(--ink);line-height:1.5;
+    background:var(--body-bg);background-image:var(--bg-glow);
+    -webkit-font-smoothing:antialiased;min-height:100%;
+  }
+  a{color:var(--blue)}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+    outline:2px solid var(--blue);outline-offset:2px;border-radius:4px;
+  }
+  .stage{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* ---------- personal badge (top right) ---------- */
+  #ay-badge{position:fixed;top:18px;right:18px;z-index:9999}
+  @media(max-width:900px){
+    #ay-badge{position:static;display:inline-flex!important;margin:18px 22px 0;order:-1}
+  }
+  @media print{#ay-badge{display:none!important}}
+
+  /* ---------- hero ---------- */
+  header{padding:52px 0 10px}
+  @media(min-width:901px){header{padding-right:230px}}
+  .kick{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .kick .warn{color:var(--red)}
+  h1{font-family:var(--serif);font-weight:500;line-height:1.06;font-size:clamp(32px,5.4vw,52px);letter-spacing:-.015em;color:var(--navy);margin:10px 0 8px}
+  .subtitle{color:var(--muted);max-width:64ch;font-size:15px}
+
+  /* ---------- signature: transposition strip ---------- */
+  .strip-section{margin:30px 0 6px}
+  .strip-label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:9px}
+  .strip-label .sl-left{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:800}
+  .strip-label .sl-right{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+  .strip{display:grid;grid-template-columns:repeat(27,1fr);gap:4px}
+  .strip button{
+    border:none;border-radius:7px;aspect-ratio:1/1.35;min-width:0;cursor:pointer;
+    font-family:var(--mono);font-size:9.5px;font-weight:700;color:#fff;
+    display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;
+    box-shadow:inset 0 0 0 1px rgba(5,28,44,.10);
+    transition:transform .12s ease,box-shadow .12s ease;
+  }
+  .strip button:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px rgba(5,28,44,.10),0 0 0 2px var(--gold)}
+  .strip button.s-implemented{background:var(--green)}
+  .strip button.s-in_progress{background:var(--amber)}
+  .strip button.s-not_yet{background:var(--red)}
+  @media(max-width:720px){
+    .strip{grid-template-columns:repeat(9,1fr)}
+    .strip button{aspect-ratio:1.5/1}
+  }
+
+  /* ---------- summary counts / filter chips ---------- */
+  .counts{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0 6px}
+  .count-chip{
+    display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:8px 15px;
+    font-family:var(--sans);font-size:12.5px;font-weight:700;cursor:pointer;
+    background:var(--card);color:var(--ink);border:1px solid var(--line-strong);
+    box-shadow:var(--sh-sm);
+  }
+  .count-chip .dot{width:10px;height:10px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(5,28,44,.12)}
+  .count-chip[data-status="implemented"] .dot{background:var(--green)}
+  .count-chip[data-status="in_progress"] .dot{background:var(--amber)}
+  .count-chip[data-status="not_yet"] .dot{background:var(--red)}
+  .count-chip[aria-pressed="true"]{border-color:var(--navy);background:var(--blue-soft);color:var(--blue-deep)}
+  [data-theme="dark"] .count-chip[aria-pressed="true"]{color:var(--blue)}
+
+  /* ---------- controls ---------- */
+  .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0 26px}
+  .search-box{position:relative;flex:1 1 260px;max-width:400px}
+  .search-box input{
+    width:100%;padding:11px 14px 11px 38px;border-radius:11px;
+    border:1px solid var(--line-strong);background:var(--card);color:var(--ink);
+    font:inherit;font-size:14px;box-shadow:var(--sh-sm);
+  }
+  .search-box input::placeholder{color:var(--faint)}
+  .search-box::before{content:"⌕";position:absolute;left:13px;top:50%;transform:translateY(-52%);font-size:17px;color:var(--faint)}
+  select{
+    padding:11px 12px;border-radius:11px;border:1px solid var(--line-strong);
+    background:var(--card);color:var(--ink);font:inherit;font-size:13.5px;font-weight:600;
+    box-shadow:var(--sh-sm);cursor:pointer;
+  }
+  #themeToggle{
+    flex:none;background:var(--card);border:1px solid var(--line-strong);border-radius:99px;
+    width:40px;height:40px;font-size:16px;cursor:pointer;box-shadow:var(--sh-sm);color:var(--navy);
+  }
+
+  /* ---------- cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;padding-bottom:24px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:18px 18px 15px;box-shadow:var(--sh-sm);
+    display:flex;flex-direction:column;gap:10px;scroll-margin-top:24px;
+    transition:box-shadow .15s ease,transform .15s ease;
+  }
+  .card:hover{box-shadow:var(--sh)}
+  .card.highlight{box-shadow:var(--sh),0 0 0 2px var(--gold)}
+  .card-head{display:flex;align-items:center;gap:11px}
+  .flag{font-size:25px;line-height:1;flex:none}
+  .country-name{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--navy);letter-spacing:-.01em;flex:1;line-height:1.15}
+  .status-pill{
+    flex:none;display:inline-flex;align-items:center;gap:7px;
+    font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+    padding:6px 11px;border-radius:99px;
+  }
+  .status-pill .lamp{width:10px;height:10px;border-radius:50%;flex:none}
+  .status-pill.s-implemented{background:var(--green-soft);color:var(--green)}
+  .status-pill.s-implemented .lamp{background:var(--green)}
+  .status-pill.s-in_progress{background:var(--amber-soft);color:var(--amber)}
+  .status-pill.s-in_progress .lamp{background:var(--amber)}
+  .status-pill.s-not_yet{background:var(--red-soft);color:var(--red)}
+  .status-pill.s-not_yet .lamp{background:var(--red)}
+  .card-summary{font-size:13.5px;color:var(--ink)}
+  [data-theme="dark"] .card-summary{color:var(--navy-2)}
+  .card-sources{display:flex;flex-wrap:wrap;gap:6px}
+  .card-sources a{
+    font-size:12px;font-weight:600;text-decoration:none;color:var(--blue-deep);
+    border:1px solid var(--line);padding:4px 11px;border-radius:99px;background:transparent;
+  }
+  .card-sources a:hover{background:var(--blue-soft);border-color:var(--blue-deep)}
+  .card-meta{
+    display:flex;flex-wrap:wrap;gap:5px 16px;font-family:var(--mono);font-size:11px;
+    color:var(--faint);border-top:1px solid var(--line);padding-top:10px;margin-top:auto;
+  }
+  .card-meta b{color:var(--muted);font-weight:600}
+  .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:48px 0;font-size:15px;font-family:var(--serif)}
+
+  /* ---------- footer ---------- */
+  .site-foot{border-top:1px solid var(--line);margin-top:8px;padding:24px 0 8px;font-size:12.5px;color:var(--muted)}
+  .site-foot p{max-width:86ch;margin-bottom:8px}
+  .refresh-stamp{font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+
+  /* ---------- visit counter (matches reference badge) ---------- */
+  .visit-badge{
+    position:fixed;bottom:16px;right:16px;z-index:40;display:inline-flex;align-items:center;gap:8px;
+    background:color-mix(in srgb, var(--card) 94%, transparent);backdrop-filter:saturate(150%) blur(8px);
+    border:1px solid var(--line-strong);border-radius:99px;padding:6px 13px 6px 11px;
+    box-shadow:var(--sh-sm);font-family:var(--sans);
+  }
+  .visit-badge.hidden{display:none}
+  .visit-badge svg{width:13px;height:13px;color:var(--blue);flex:none}
+  .visit-badge .vb-lab{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:800;line-height:1}
+  .visit-badge .vb-num{font-size:13px;font-weight:700;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums}
+  @media print{.visit-badge{display:none}}
+
+  /* ---------- persistent copyright footer ---------- */
+  .copyright-bar{max-width:1080px;margin:0 auto;padding:6px 22px 34px;text-align:center}
+  .copyright-bar .cr-line{
+    display:inline-flex;align-items:center;gap:8px;border-top:1px solid var(--line);
+    padding-top:15px;font-family:var(--sans);font-size:11px;font-weight:600;
+    letter-spacing:.04em;color:var(--faint);line-height:1.4;
+  }
+  .copyright-bar .cr-line svg{width:12px;height:12px;flex:none;opacity:.8}
+  @media print{.copyright-bar{display:none}}
+</style>
+</head>
+<body>
+
+<!-- Amitabh Yadav · personal badge -->
+<a id="ay-badge" href="https://www.linkedin.com/in/amitabhyadav18/?utm_source=tools"
+   target="_blank" rel="noopener"
+   style="display:flex;align-items:center;gap:11px;background:#fff;border:1px solid #ece7dd;
+          border-radius:14px;padding:9px 14px 9px 10px;
+          box-shadow:0 6px 18px rgba(120,100,60,.12);
+          font-family:'Instrument Sans',system-ui,sans-serif;text-decoration:none;">
+  <span style="width:34px;height:34px;border-radius:11px;
+               background:linear-gradient(135deg,#0a66c2,#3d8bd4);color:#fff;
+               font-weight:700;font-size:14px;display:flex;align-items:center;
+               justify-content:center;">AY</span>
+  <span style="display:flex;flex-direction:column;line-height:1.2;">
+    <span style="font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#b3a892;font-family:ui-monospace,monospace;">Built by</span>
+    <span style="font-size:13.5px;font-weight:600;color:#2a2622;margin-top:1px;">Amitabh Yadav</span>
+    <span style="font-size:10.5px;color:#8a7f6d;">HR.Rewards.AI.Private Equity</span>
+    <span style="font-size:10px;color:#0a66c2;font-weight:600;margin-top:2px;">Connect on LinkedIn ↗</span>
+  </span>
+</a>
+
+<header class="stage">
+  <p class="kick">
+    <span>Directive (EU) 2023/970</span>
+    <span aria-hidden="true">·</span>
+    <span class="warn">Transposition deadline passed · 7 June 2026</span>
+  </p>
+  <h1>EU Pay Transparency<br>Directive Tracker</h1>
+  <p class="subtitle">Where each of the 27 member states stands on turning the Directive into national law — at a glance, with links to official sources.</p>
+
+  <section class="strip-section" aria-label="All 27 member states by status">
+    <div class="strip-label">
+      <span class="sl-left">The Union at a glance · one tile per member state</span>
+      <span class="sl-right" id="stripCounts"></span>
+    </div>
+    <div class="strip" id="strip" role="list"></div>
+  </section>
+
+  <div class="counts" id="counts" role="group" aria-label="Filter by status"></div>
+
+  <div class="controls">
+    <div class="search-box">
+      <input type="search" id="search" placeholder="Search by country…" aria-label="Search by country">
+    </div>
+    <select id="sort" aria-label="Sort countries">
+      <option value="alpha">Sort: A → Z</option>
+      <option value="status">Sort: by status</option>
+      <option value="updated">Sort: recently updated</option>
+    </select>
+    <button id="themeToggle" aria-label="Switch between light and dark mode" title="Light / dark mode">◐</button>
+  </div>
+</header>
+
+<main class="stage">
+  <div class="grid" id="grid" aria-live="polite"></div>
+
+  <div class="site-foot">
+    <p id="disclaimer"></p>
+    <p>
+      Primary reference: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970" target="_blank" rel="noopener">Directive (EU) 2023/970 on EUR-Lex</a>
+      · <a href="https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" target="_blank" rel="noopener">National transposition measures (EUR-Lex)</a>
+    </p>
+    <p class="refresh-stamp" id="refreshStamp"></p>
+  </div>
+</main>
+
+<!-- visit counter: populated when served via Netlify; stays hidden otherwise -->
+<div class="visit-badge hidden" id="visitBadge" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+  <span class="vb-lab">Visits</span>
+  <span class="vb-num" id="visitCount">—</span>
+</div>
+
+<footer class="copyright-bar">
+  <div class="cr-line">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.5 9.5a3.5 3.5 0 1 0 0 5"/></svg>
+    Copyright © 2026 Amitabh Yadav. All rights reserved.
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   EU Pay Transparency Directive Tracker
+   Data source: ./data.json (canonical, overwritten by the
+   automated update workflow). If fetch fails (e.g. the file is
+   opened directly from disk), the embedded fallback snapshot
+   below is used and flagged as such.
+   ============================================================ */
+
+const STATUS = {
+  implemented: { label: "Implemented", order: 0 },
+  in_progress: { label: "In progress", order: 1 },
+  not_yet:     { label: "Not yet implemented", order: 2 }
+};
+
+const state = { data: null, query: "", filter: null, sort: "alpha", fallback: false };
+
+/* ---------- theme ---------- */
+(function initTheme() {
+  let saved = null;
+  try { saved = localStorage.getItem("ptd-theme"); } catch (e) {}
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+})();
+document.getElementById("themeToggle").addEventListener("click", () => {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("ptd-theme", next); } catch (e) {}
+});
+
+/* ---------- data loading ---------- */
+async function loadData() {
+  try {
+    const res = await fetch("data.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    state.data = await res.json();
+  } catch (e) {
+    const el = document.getElementById("fallback-data");
+    state.data = JSON.parse(el.textContent);
+    state.fallback = true;
+  }
+  render();
+}
+
+/* ---------- helpers ---------- */
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+function fmtDate(iso) {
+  if (!iso) return null;
+  const d = new Date(iso + "T00:00:00");
+  if (isNaN(d)) return iso; // free-text like "Phased, dates TBC"
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
+function visibleCountries() {
+  const q = state.query.trim().toLowerCase();
+  let list = state.data.countries.filter(c =>
+    (!state.filter || c.status === state.filter) &&
+    (!q || c.name.toLowerCase().includes(q) || c.code.toLowerCase() === q)
+  );
+  if (state.sort === "alpha") list.sort((a, b) => a.name.localeCompare(b.name));
+  if (state.sort === "status") list.sort((a, b) =>
+    STATUS[a.status].order - STATUS[b.status].order || a.name.localeCompare(b.name));
+  if (state.sort === "updated") list.sort((a, b) =>
+    (b.lastUpdated || "").localeCompare(a.lastUpdated || "") || a.name.localeCompare(b.name));
+  return list;
+}
+
+/* ---------- rendering ---------- */
+function render() {
+  renderStrip();
+  renderCounts();
+  renderGrid();
+  renderFooter();
+}
+
+function renderStrip() {
+  const strip = document.getElementById("strip");
+  const all = [...state.data.countries].sort((a, b) => a.name.localeCompare(b.name));
+  strip.innerHTML = all.map(c => `
+    <button role="listitem" class="s-${c.status}" data-code="${c.code}"
+      title="${esc(c.name)} — ${STATUS[c.status].label}"
+      aria-label="${esc(c.name)}: ${STATUS[c.status].label}. Jump to card.">${c.code}</button>
+  `).join("");
+  strip.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.filter = null; state.query = "";
+      document.getElementById("search").value = "";
+      render();
+      const card = document.getElementById("card-" + btn.dataset.code);
+      if (card) {
+        card.scrollIntoView({ block: "center" });
+        card.classList.add("highlight");
+        setTimeout(() => card.classList.remove("highlight"), 1600);
+      }
+    });
+  });
+  const tally = tallyStatuses();
+  document.getElementById("stripCounts").textContent =
+    `${tally.implemented} implemented · ${tally.in_progress} in progress · ${tally.not_yet} not yet`;
+}
+
+function tallyStatuses() {
+  const t = { implemented: 0, in_progress: 0, not_yet: 0 };
+  state.data.countries.forEach(c => t[c.status]++);
+  return t;
+}
+
+function renderCounts() {
+  const tally = tallyStatuses();
+  const glyph = { implemented: "🟢", in_progress: "🟡", not_yet: "🔴" };
+  document.getElementById("counts").innerHTML = Object.keys(STATUS).map(s => `
+    <button class="count-chip" data-status="${s}" aria-pressed="${state.filter === s}">
+      <span class="dot" aria-hidden="true"></span>
+      ${glyph[s]} ${STATUS[s].label} — ${tally[s]}
+    </button>
+  `).join("") + `
+    <button class="count-chip" data-status="" aria-pressed="${state.filter === null}">
+      All 27 states
+    </button>`;
+  document.querySelectorAll(".count-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const s = chip.dataset.status || null;
+      state.filter = (state.filter === s) ? null : s;
+      render();
+    });
+  });
+}
+
+function renderGrid() {
+  const list = visibleCountries();
+  const grid = document.getElementById("grid");
+  if (!list.length) {
+    grid.innerHTML = `<div class="empty">No member state matches this search. Clear the search box or choose “All 27 states”.</div>`;
+    return;
+  }
+  grid.innerHTML = list.map(c => {
+    const expected = c.expectedDate ? (fmtDate(c.expectedDate) || c.expectedDate) : "Not announced";
+    const sources = (c.sources || []).map(s =>
+      `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join("");
+    return `
+    <article class="card" id="card-${c.code}">
+      <div class="card-head">
+        <span class="flag" aria-hidden="true">${c.flag}</span>
+        <span class="country-name">${esc(c.name)}</span>
+        <span class="status-pill s-${c.status}"><span class="lamp" aria-hidden="true"></span>${STATUS[c.status].label}</span>
+      </div>
+      <p class="card-summary">${esc(c.summary)}</p>
+      <div class="card-sources">${sources}</div>
+      <div class="card-meta">
+        <span>Expected: <b>${esc(expected)}</b></span>
+        <span>Checked: <b>${fmtDate(c.lastUpdated) || "—"}</b></span>
+      </div>
+    </article>`;
+  }).join("");
+}
+
+function renderFooter() {
+  document.getElementById("disclaimer").textContent = state.data.meta.disclaimer;
+  const stamp = fmtDate(state.data.meta.lastGlobalRefresh);
+  document.getElementById("refreshStamp").textContent =
+    `Last global refresh: ${stamp} · Data version ${state.data.meta.dataVersion}` +
+    (state.fallback ? " · Showing embedded snapshot (data.json could not be loaded — serve this page over HTTP for live data)" : "");
+}
+
+/* ---------- controls ---------- */
+document.getElementById("search").addEventListener("input", e => {
+  state.query = e.target.value;
+  renderGrid();
+});
+document.getElementById("sort").addEventListener("change", e => {
+  state.sort = e.target.value;
+  renderGrid();
+});
+
+/* ---------- visit counter (Netlify Function + Blobs) ---------- */
+(function initVisits() {
+  const badge = document.getElementById("visitBadge"), numEl = document.getElementById("visitCount");
+  let counted = false;
+  try { counted = sessionStorage.getItem("ptd_visited") === "1"; } catch (e) {}
+  fetch("/.netlify/functions/visits", { method: counted ? "GET" : "POST" })
+    .then(r => { if (!r.ok) throw new Error("bad status"); return r.json(); })
+    .then(d => {
+      if (typeof d.count !== "number") throw new Error("bad payload");
+      try { sessionStorage.setItem("ptd_visited", "1"); } catch (e) {}
+      numEl.textContent = new Intl.NumberFormat("en-GB").format(d.count);
+      badge.classList.remove("hidden");
+    })
+    .catch(() => { /* not hosted on Netlify or function unavailable — badge stays hidden */ });
+})();
+
+loadData();
+</script>
+
+<!-- Embedded fallback snapshot (used only when data.json cannot be fetched,
+     e.g. when the file is opened directly from disk). data.json is canonical. -->
+<script id="fallback-data" type="application/json">
+{
+  "meta": {
+    "directive": "Directive (EU) 2023/970 — Pay Transparency",
+    "transpositionDeadline": "2026-06-07",
+    "lastGlobalRefresh": "2026-07-02",
+    "dataVersion": "1.0.0",
+    "disclaimer": "Informational overview only — not legal advice. Statuses reflect publicly available official information at the date shown and national implementation details vary. Always verify against the linked official sources.",
+    "primaryReference": {
+      "label": "Directive (EU) 2023/970 on EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970"
+    },
+    "nimReference": {
+      "label": "EUR-Lex — National transposition measures",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+    }
+  },
+  "statusLegend": {
+    "implemented": "Final national law transposing the Directive is in force.",
+    "in_progress": "Draft legislation published, partial transposition in force, or a formal legislative process is underway.",
+    "not_yet": "No published draft, or the transposition process is paused."
+  },
+  "countries": [
+    {
+      "code": "AT",
+      "name": "Austria",
+      "flag": "🇦🇹",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity. The 7 June 2026 deadline has passed without national implementing legislation.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "flag": "🇧🇪",
+      "status": "in_progress",
+      "summary": "Partial implementation exists in regional public-sector frameworks; federal transposition for the private sector is still under discussion. Belgium formally requested a six-month extension shortly before the deadline.",
+      "expectedDate": "Late 2026 (indicative)",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "flag": "🇧🇬",
+      "status": "in_progress",
+      "summary": "A draft transposition law went into public consultation in May–June 2026 but has not yet been adopted by parliament.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "flag": "🇭🇷",
+      "status": "not_yet",
+      "summary": "Implementation has been planned through amendments to the Labour Act, but no draft legislation has been published.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "flag": "🇨🇾",
+      "status": "in_progress",
+      "summary": "A draft bill on equal remuneration was published by the Department of Labour Relations in late 2025 and has been through consultation, but no final law has been enacted.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "CZ",
+      "name": "Czech Republic",
+      "flag": "🇨🇿",
+      "status": "in_progress",
+      "summary": "A ban on pay-secrecy clauses has been in force since June 2025 as a partial step. A comprehensive Labour Code amendment was introduced in March 2026, targeting entry into force on 1 January 2027.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "flag": "🇩🇰",
+      "status": "in_progress",
+      "summary": "A draft bill has been published, openly acknowledging the missed deadline and proposing entry into force on 1 January 2027.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "flag": "🇪🇪",
+      "status": "in_progress",
+      "summary": "The government sought an EU-level postponement in April 2026, then signalled it would proceed with limited pre-employment transparency measures first while seeking to delay pay-gap reporting.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "flag": "🇫🇮",
+      "status": "in_progress",
+      "summary": "A formal transposition process is underway but implementation has been delayed beyond the 7 June 2026 deadline.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "flag": "🇫🇷",
+      "status": "in_progress",
+      "summary": "A draft transposition law has been published (expanded pay-gap indicators, comparator information rights, ban on pay-secrecy clauses) with a stated entry into force of 1 January 2027. It has not yet appeared in the Journal officiel.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "status": "in_progress",
+      "summary": "No draft bill yet, but an expert commission has published a detailed implementation model and a formal bill is expected. The existing Entgelttransparenzgesetz remains in force but falls short of the Directive's requirements.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "flag": "🇬🇷",
+      "status": "not_yet",
+      "summary": "At an early preparatory stage; no draft implementing legislation has been published.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "flag": "🇭🇺",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity as of the last check.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "flag": "🇮🇪",
+      "status": "in_progress",
+      "summary": "The government has confirmed a phased transposition; published draft measures so far cover pre-employment transparency only, with further elements (including pay-gap reporting) to follow.",
+      "expectedDate": "Phased, dates TBC",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "flag": "🇮🇹",
+      "status": "implemented",
+      "summary": "Legislative Decree No. 96/2026 was published in the Gazzetta Ufficiale on 1 June 2026 and entered into force on 7 June 2026, covering recruitment transparency, information rights and reporting.",
+      "expectedDate": "In force since 2026-06-07",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Gazzetta Ufficiale (official gazette)", "url": "https://www.gazzettaufficiale.it" }
+      ]
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "flag": "🇱🇻",
+      "status": "in_progress",
+      "summary": "The Ministry of Welfare published a draft transposition law in spring 2026, broadly aligned with the Directive; it has not yet been enacted.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "flag": "🇱🇹",
+      "status": "implemented",
+      "summary": "The final transposition law was adopted in May 2026 with effect from 7 June 2026. Some provisions are staged: the right to information applies from 1 January 2027 and the first reporting deadline is March 2028.",
+      "expectedDate": "In force since 2026-06-07",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Seimas legal acts register", "url": "https://e-seimas.lrs.lt" }
+      ]
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "flag": "🇱🇺",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity as of the last check.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "flag": "🇲🇹",
+      "status": "implemented",
+      "summary": "Implementing regulations were published on 5 June 2026 and are in force, building on earlier partial measures that applied from August 2025.",
+      "expectedDate": "In force since 2026-06-07",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Laws of Malta (official portal)", "url": "https://legislation.mt" }
+      ]
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "flag": "🇳🇱",
+      "status": "in_progress",
+      "summary": "A comprehensive draft closely following the Directive has been published, but the government announced implementation is delayed to 1 January 2027, shifting the first reporting cycle accordingly.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "flag": "🇵🇱",
+      "status": "in_progress",
+      "summary": "Recruitment-stage transparency rules are already in force. Broader draft legislation goes beyond the Directive, including reporting from 100 employees and a 30-day information-request deadline.",
+      "expectedDate": "Phased, dates TBC",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "flag": "🇵🇹",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity as of the last check.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "flag": "🇷🇴",
+      "status": "in_progress",
+      "summary": "A revised draft transposition law was published in March 2026 and completed consultation in April; it has not yet been enacted.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "flag": "🇸🇰",
+      "status": "implemented",
+      "summary": "A comprehensive transposition law covering transparency and reporting requirements entered into force on 1 June 2026, meeting the Directive's deadline.",
+      "expectedDate": "In force since 2026-06-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Slov-Lex (official legal portal)", "url": "https://www.slov-lex.sk" }
+      ]
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "flag": "🇸🇮",
+      "status": "not_yet",
+      "summary": "No draft transposition legislation has been published. The existing Employment Relationships Act already contains an equal-pay principle, but it predates and falls short of the Directive.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "flag": "🇪🇸",
+      "status": "not_yet",
+      "summary": "A prior public consultation on a transposing Royal Decree closed in May 2026, but no draft text has been published.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "flag": "🇸🇪",
+      "status": "not_yet",
+      "summary": "Transposition was paused in March 2026; the government is seeking renegotiation of the Directive at EU level, citing administrative burden and national labour-market arrangements.",
+      "expectedDate": "Paused",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>

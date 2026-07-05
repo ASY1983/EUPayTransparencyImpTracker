@@ -1,0 +1,8 @@
+{
+  "name": "eu-ptd-tracker",
+  "private": true,
+  "description": "EU Pay Transparency Directive Tracker - static site with a Netlify Blobs visit counter",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

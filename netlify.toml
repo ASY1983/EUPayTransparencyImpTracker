@@ -1,0 +1,18 @@
+# Netlify configuration — static site + one serverless function (visit counter).
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
+  for = "/data.json"
+  [headers.values]
+    # Always serve fresh data after an automated update commit.
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

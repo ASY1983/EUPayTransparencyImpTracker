@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "directive": "Directive (EU) 2023/970 — Pay Transparency",
+    "transpositionDeadline": "2026-06-07",
+    "lastGlobalRefresh": "2026-07-02",
+    "dataVersion": "1.0.0",
+    "disclaimer": "Informational overview only — not legal advice. Statuses reflect publicly available official information at the date shown and national implementation details vary. Always verify against the linked official sources.",
+    "primaryReference": {
+      "label": "Directive (EU) 2023/970 on EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970"
+    },
+    "nimReference": {
+      "label": "EUR-Lex — National transposition measures",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+    }
+  },
+  "statusLegend": {
+    "implemented": "Final national law transposing the Directive is in force.",
+    "in_progress": "Draft legislation published, partial transposition in force, or a formal legislative process is underway.",
+    "not_yet": "No published draft, or the transposition process is paused."
+  },
+  "countries": [
+    {
+      "code": "AT",
+      "name": "Austria",
+      "flag": "🇦🇹",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity. The 7 June 2026 deadline has passed without national implementing legislation.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "flag": "🇧🇪",
+      "status": "in_progress",
+      "summary": "Partial implementation exists in regional public-sector frameworks; federal transposition for the private sector is still under discussion. Belgium formally requested a six-month extension shortly before the deadline.",
+      "expectedDate": "Late 2026 (indicative)",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "flag": "🇧🇬",
+      "status": "in_progress",
+      "summary": "A draft transposition law went into public consultation in May–June 2026 but has not yet been adopted by parliament.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "flag": "🇭🇷",
+      "status": "not_yet",
+      "summary": "Implementation has been planned through amendments to the Labour Act, but no draft legislation has been published.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "flag": "🇨🇾",
+      "status": "in_progress",
+      "summary": "A draft bill on equal remuneration was published by the Department of Labour Relations in late 2025 and has been through consultation, but no final law has been enacted.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "CZ",
+      "name": "Czech Republic",
+      "flag": "🇨🇿",
+      "status": "in_progress",
+      "summary": "A ban on pay-secrecy clauses has been in force since June 2025 as a partial step. A comprehensive Labour Code amendment was introduced in March 2026, targeting entry into force on 1 January 2027.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "flag": "🇩🇰",
+      "status": "in_progress",
+      "summary": "A draft bill has been published, openly acknowledging the missed deadline and proposing entry into force on 1 January 2027.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "flag": "🇪🇪",
+      "status": "in_progress",
+      "summary": "The government sought an EU-level postponement in April 2026, then signalled it would proceed with limited pre-employment transparency measures first while seeking to delay pay-gap reporting.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "flag": "🇫🇮",
+      "status": "in_progress",
+      "summary": "A formal transposition process is underway but implementation has been delayed beyond the 7 June 2026 deadline.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "flag": "🇫🇷",
+      "status": "in_progress",
+      "summary": "A draft transposition law has been published (expanded pay-gap indicators, comparator information rights, ban on pay-secrecy clauses) with a stated entry into force of 1 January 2027. It has not yet appeared in the Journal officiel.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "status": "in_progress",
+      "summary": "No draft bill yet, but an expert commission has published a detailed implementation model and a formal bill is expected. The existing Entgelttransparenzgesetz remains in force but falls short of the Directive's requirements.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "flag": "🇬🇷",
+      "status": "not_yet",
+      "summary": "At an early preparatory stage; no draft implementing legislation has been published.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "flag": "🇭🇺",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity as of the last check.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "flag": "🇮🇪",
+      "status": "in_progress",
+      "summary": "The government has confirmed a phased transposition; published draft measures so far cover pre-employment transparency only, with further elements (including pay-gap reporting) to follow.",
+      "expectedDate": "Phased, dates TBC",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "flag": "🇮🇹",
+      "status": "implemented",
+      "summary": "Legislative Decree No. 96/2026 was published in the Gazzetta Ufficiale on 1 June 2026 and entered into force on 7 June 2026, covering recruitment transparency, information rights and reporting.",
+      "expectedDate": "In force since 2026-06-07",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Gazzetta Ufficiale (official gazette)", "url": "https://www.gazzettaufficiale.it" }
+      ]
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "flag": "🇱🇻",
+      "status": "in_progress",
+      "summary": "The Ministry of Welfare published a draft transposition law in spring 2026, broadly aligned with the Directive; it has not yet been enacted.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "flag": "🇱🇹",
+      "status": "implemented",
+      "summary": "The final transposition law was adopted in May 2026 with effect from 7 June 2026. Some provisions are staged: the right to information applies from 1 January 2027 and the first reporting deadline is March 2028.",
+      "expectedDate": "In force since 2026-06-07",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Seimas legal acts register", "url": "https://e-seimas.lrs.lt" }
+      ]
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "flag": "🇱🇺",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity as of the last check.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "flag": "🇲🇹",
+      "status": "implemented",
+      "summary": "Implementing regulations were published on 5 June 2026 and are in force, building on earlier partial measures that applied from August 2025.",
+      "expectedDate": "In force since 2026-06-07",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Laws of Malta (official portal)", "url": "https://legislation.mt" }
+      ]
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "flag": "🇳🇱",
+      "status": "in_progress",
+      "summary": "A comprehensive draft closely following the Directive has been published, but the government announced implementation is delayed to 1 January 2027, shifting the first reporting cycle accordingly.",
+      "expectedDate": "2027-01-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "flag": "🇵🇱",
+      "status": "in_progress",
+      "summary": "Recruitment-stage transparency rules are already in force. Broader draft legislation goes beyond the Directive, including reporting from 100 employees and a 30-day information-request deadline.",
+      "expectedDate": "Phased, dates TBC",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "flag": "🇵🇹",
+      "status": "not_yet",
+      "summary": "No published draft or confirmed transposition activity as of the last check.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "flag": "🇷🇴",
+      "status": "in_progress",
+      "summary": "A revised draft transposition law was published in March 2026 and completed consultation in April; it has not yet been enacted.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "flag": "🇸🇰",
+      "status": "implemented",
+      "summary": "A comprehensive transposition law covering transparency and reporting requirements entered into force on 1 June 2026, meeting the Directive's deadline.",
+      "expectedDate": "In force since 2026-06-01",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
+        { "label": "Slov-Lex (official legal portal)", "url": "https://www.slov-lex.sk" }
+      ]
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "flag": "🇸🇮",
+      "status": "not_yet",
+      "summary": "No draft transposition legislation has been published. The existing Employment Relationships Act already contains an equal-pay principle, but it predates and falls short of the Directive.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "flag": "🇪🇸",
+      "status": "not_yet",
+      "summary": "A prior public consultation on a transposing Royal Decree closed in May 2026, but no draft text has been published.",
+      "expectedDate": null,
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "flag": "🇸🇪",
+      "status": "not_yet",
+      "summary": "Transposition was paused in March 2026; the government is seeking renegotiation of the Directive at EU level, citing administrative burden and national labour-market arrangements.",
+      "expectedDate": "Paused",
+      "lastUpdated": "2026-07-02",
+      "sources": [
+        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
+      ]
+    }
+  ]
+}
