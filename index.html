@@ -428,7 +428,8 @@ function renderGrid() {
       <div class="card-sources">${sources}</div>
       <div class="card-meta">
         <span>Expected: <b>${esc(expected)}</b></span>
-        <span>Checked: <b>${fmtDate(c.lastUpdated) || "—"}</b></span>
+        <span>Verified: <b>${fmtDate(c.lastUpdated) || "—"}</b></span>
+        <span>Monitor checked: <b>${fmtDate(c.lastChecked) || fmtDate(c.lastUpdated) || "—"}</b></span>
       </div>
     </article>`;
   }).join("");
