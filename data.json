@@ -2,7 +2,7 @@
   "meta": {
     "directive": "Directive (EU) 2023/970 — Pay Transparency",
     "transpositionDeadline": "2026-06-07",
-    "lastGlobalRefresh": "2026-07-02",
+    "lastGlobalRefresh": "2026-07-05",
     "dataVersion": "1.0.0",
     "disclaimer": "Informational overview only — not legal advice. Statuses reflect publicly available official information at the date shown and national implementation details vary. Always verify against the linked official sources.",
     "primaryReference": {
@@ -12,7 +12,37 @@
     "nimReference": {
       "label": "EUR-Lex — National transposition measures",
       "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
-    }
+    },
+    "nimCounts": {
+      "AT": 2,
+      "BE": 2,
+      "BG": 2,
+      "HR": 1,
+      "CY": 1,
+      "CZ": 2,
+      "DK": 1,
+      "EE": 2,
+      "FI": 1,
+      "FR": 1,
+      "DE": 1,
+      "GR": 1,
+      "HU": 1,
+      "IE": 1,
+      "IT": 2,
+      "LV": 1,
+      "LT": 2,
+      "LU": 1,
+      "MT": 3,
+      "NL": 1,
+      "PL": 2,
+      "PT": 1,
+      "RO": 2,
+      "SK": 2,
+      "SI": 2,
+      "ES": 2,
+      "SE": 2
+    },
+    "lastRunUtc": "2026-07-05T20:01:37+00:00"
   },
   "statusLegend": {
     "implemented": "Final national law transposing the Directive is in force.",
@@ -29,8 +59,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "BE",
@@ -41,8 +75,12 @@
       "expectedDate": "Late 2026 (indicative)",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "BG",
@@ -53,8 +91,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "HR",
@@ -65,8 +107,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "CY",
@@ -77,8 +123,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "CZ",
@@ -89,8 +139,12 @@
       "expectedDate": "2027-01-01",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "DK",
@@ -101,8 +155,12 @@
       "expectedDate": "2027-01-01",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "EE",
@@ -113,8 +171,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "FI",
@@ -125,8 +187,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "FR",
@@ -137,8 +203,12 @@
       "expectedDate": "2027-01-01",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "DE",
@@ -149,8 +219,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "GR",
@@ -161,8 +235,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "HU",
@@ -173,8 +251,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "IE",
@@ -185,8 +267,12 @@
       "expectedDate": "Phased, dates TBC",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "IT",
@@ -197,9 +283,16 @@
       "expectedDate": "In force since 2026-06-07",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
-        { "label": "Gazzetta Ufficiale (official gazette)", "url": "https://www.gazzettaufficiale.it" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        },
+        {
+          "label": "Gazzetta Ufficiale (official gazette)",
+          "url": "https://www.gazzettaufficiale.it"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "LV",
@@ -210,8 +303,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "LT",
@@ -222,9 +319,16 @@
       "expectedDate": "In force since 2026-06-07",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
-        { "label": "Seimas legal acts register", "url": "https://e-seimas.lrs.lt" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        },
+        {
+          "label": "Seimas legal acts register",
+          "url": "https://e-seimas.lrs.lt"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "LU",
@@ -235,8 +339,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "MT",
@@ -247,9 +355,16 @@
       "expectedDate": "In force since 2026-06-07",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
-        { "label": "Laws of Malta (official portal)", "url": "https://legislation.mt" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        },
+        {
+          "label": "Laws of Malta (official portal)",
+          "url": "https://legislation.mt"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "NL",
@@ -260,8 +375,12 @@
       "expectedDate": "2027-01-01",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "PL",
@@ -272,8 +391,12 @@
       "expectedDate": "Phased, dates TBC",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "PT",
@@ -284,8 +407,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "RO",
@@ -296,8 +423,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "SK",
@@ -308,9 +439,16 @@
       "expectedDate": "In force since 2026-06-01",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" },
-        { "label": "Slov-Lex (official legal portal)", "url": "https://www.slov-lex.sk" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        },
+        {
+          "label": "Slov-Lex (official legal portal)",
+          "url": "https://www.slov-lex.sk"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "SI",
@@ -321,8 +459,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "ES",
@@ -333,8 +475,12 @@
       "expectedDate": null,
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     },
     {
       "code": "SE",
@@ -345,8 +491,12 @@
       "expectedDate": "Paused",
       "lastUpdated": "2026-07-02",
       "sources": [
-        { "label": "EUR-Lex — national measures", "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970" }
-      ]
+        {
+          "label": "EUR-Lex — national measures",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
+        }
+      ],
+      "lastChecked": "2026-07-05"
     }
   ]
 }
