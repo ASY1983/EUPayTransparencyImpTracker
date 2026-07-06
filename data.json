@@ -2,7 +2,7 @@
   "meta": {
     "directive": "Directive (EU) 2023/970 — Pay Transparency",
     "transpositionDeadline": "2026-06-07",
-    "lastGlobalRefresh": "2026-07-05",
+    "lastGlobalRefresh": "2026-07-06",
     "dataVersion": "1.0.0",
     "disclaimer": "Informational overview only — not legal advice. Statuses reflect publicly available official information at the date shown and national implementation details vary. Always verify against the linked official sources.",
     "primaryReference": {
@@ -14,35 +14,35 @@
       "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
     },
     "nimCounts": {
-      "AT": 2,
-      "BE": 2,
-      "BG": 2,
-      "HR": 1,
-      "CY": 1,
-      "CZ": 2,
-      "DK": 1,
-      "EE": 2,
-      "FI": 1,
-      "FR": 1,
-      "DE": 1,
-      "GR": 1,
-      "HU": 1,
-      "IE": 1,
-      "IT": 2,
-      "LV": 1,
-      "LT": 2,
-      "LU": 1,
-      "MT": 3,
-      "NL": 1,
-      "PL": 2,
-      "PT": 1,
-      "RO": 2,
-      "SK": 2,
-      "SI": 2,
-      "ES": 2,
-      "SE": 2
+      "AT": 0,
+      "BE": 0,
+      "BG": 0,
+      "HR": 0,
+      "CY": 0,
+      "CZ": 0,
+      "DK": 0,
+      "EE": 0,
+      "FI": 0,
+      "FR": 0,
+      "DE": 0,
+      "GR": 0,
+      "HU": 0,
+      "IE": 0,
+      "IT": 0,
+      "LV": 0,
+      "LT": 0,
+      "LU": 0,
+      "MT": 0,
+      "NL": 0,
+      "PL": 0,
+      "PT": 0,
+      "RO": 0,
+      "SK": 0,
+      "SI": 0,
+      "ES": 0,
+      "SE": 0
     },
-    "lastRunUtc": "2026-07-05T20:01:37+00:00"
+    "lastRunUtc": "2026-07-06T10:13:48+00:00"
   },
   "statusLegend": {
     "implemented": "Final national law transposing the Directive is in force.",
@@ -64,7 +64,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "BE",
@@ -80,7 +81,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "BG",
@@ -96,7 +98,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "HR",
@@ -112,7 +115,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "CY",
@@ -128,7 +132,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "CZ",
@@ -144,7 +149,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "DK",
@@ -160,7 +166,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "EE",
@@ -176,7 +183,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "FI",
@@ -192,7 +200,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "FR",
@@ -208,7 +217,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "DE",
@@ -224,7 +234,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "GR",
@@ -240,7 +251,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "HU",
@@ -256,7 +268,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "IE",
@@ -272,7 +285,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "IT",
@@ -292,7 +306,8 @@
           "url": "https://www.gazzettaufficiale.it"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "LV",
@@ -308,7 +323,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "LT",
@@ -328,7 +344,8 @@
           "url": "https://e-seimas.lrs.lt"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "LU",
@@ -344,7 +361,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "MT",
@@ -364,7 +382,8 @@
           "url": "https://legislation.mt"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "NL",
@@ -380,7 +399,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "PL",
@@ -396,7 +416,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "PT",
@@ -412,7 +433,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "RO",
@@ -428,7 +450,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "SK",
@@ -448,7 +471,8 @@
           "url": "https://www.slov-lex.sk"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "SI",
@@ -464,7 +488,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "ES",
@@ -480,7 +505,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     },
     {
       "code": "SE",
@@ -496,7 +522,8 @@
           "url": "https://eur-lex.europa.eu/legal-content/EN/NIM/?uri=CELEX:32023L0970"
         }
       ],
-      "lastChecked": "2026-07-05"
+      "lastChecked": "2026-07-06",
+      "reviewNeeded": true
     }
   ]
 }
